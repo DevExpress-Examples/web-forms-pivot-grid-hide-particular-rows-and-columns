@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Default.aspx](./CS/ASPxPivotGrid_HidingColumnsAndRows/Default.aspx) (VB: [Default.aspx](./VB/ASPxPivotGrid_HidingColumnsAndRows/Default.aspx))
+* [Default.aspx.cs](./CS/ASPxPivotGrid_HidingColumnsAndRows/Default.aspx.cs) (VB: [Default.aspx](./VB/ASPxPivotGrid_HidingColumnsAndRows/Default.aspx))
+<!-- default file list end -->
 # How to hide particular rows and columns
 
 
