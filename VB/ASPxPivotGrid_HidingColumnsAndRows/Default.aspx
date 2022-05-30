@@ -1,10 +1,10 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb"
     Inherits="ASPxPivotGrid_HidingColumnsAndRows._Default" %>
-<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v13.1, Version=13.1.14.0,
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v21.2, Version=21.2.7.0,
     Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxPivotGrid"
     TagPrefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
@@ -25,7 +25,8 @@
                 OnFieldValueDisplayText="pivotGrid_FieldValueDisplayText"
                 OnCustomFieldValueCells="pivotGrid_CustomFieldValueCells"
                 OptionsCustomization-AllowFilter="false"
-                OptionsCustomization-AllowDrag="false">
+                OptionsCustomization-AllowDrag="false"
+                OptionsData-DataProcessingEngine="Optimized">
             </dx:ASPxPivotGrid>
         </div>
     </form>    
