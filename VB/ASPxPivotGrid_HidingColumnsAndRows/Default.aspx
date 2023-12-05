@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb"
+<%@ Page Language="VB" AutoEventWireup="true" CodeBehind="Default.aspx.vb"
     Inherits="ASPxPivotGrid_HidingColumnsAndRows._Default" %>
 <%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v21.2, Version=21.2.14.0,
     Culture=neutral, PublicKeyToken=b88d1754d700e49a"

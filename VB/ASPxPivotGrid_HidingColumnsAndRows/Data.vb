@@ -1,28 +1,36 @@
-﻿Imports System.Data
+Imports System.Data
 Imports DevExpress.Web.ASPxPivotGrid
 Imports DevExpress.XtraPivotGrid
 
 Namespace ASPxPivotGrid_HidingColumnsAndRows
-    Public NotInheritable Class PivotHelper
 
-        Private Sub New()
-        End Sub
+    Public Module PivotHelper
 
         Public Const Employee As String = "Employee"
+
         Public Const Widget As String = "Widget"
+
         Public Const Month As String = "Month"
+
         Public Const RetailPrice As String = "Retail Price"
+
         Public Const WholesalePrice As String = "Wholesale Price"
+
         Public Const Quantity As String = "Quantity"
+
         Public Const Remains As String = "Remains"
 
         Public Const EmployeeA As String = "Employee A"
+
         Public Const EmployeeB As String = "Employee B"
+
         Public Const WidgetA As String = "Widget A"
+
         Public Const WidgetB As String = "Widget B"
+
         Public Const WidgetC As String = "Widget C"
 
-        Public Shared Sub FillPivot(ByVal pivot As ASPxPivotGrid)
+        Public Sub FillPivot(ByVal pivot As ASPxPivotGrid)
             pivot.Fields.AddDataSourceColumn(Employee, PivotArea.RowArea)
             pivot.Fields.AddDataSourceColumn(Widget, PivotArea.RowArea)
             pivot.Fields.AddDataSourceColumn(Month, PivotArea.ColumnArea).AreaIndex = 0
@@ -32,14 +40,16 @@ Namespace ASPxPivotGrid_HidingColumnsAndRows
             pivot.Fields.AddDataSourceColumn(Remains, PivotArea.DataArea)
             For Each field As PivotGridField In pivot.Fields
                 field.AllowedAreas = GetAllowedArea(field.Area)
-            Next field
+            Next
+
             pivot.OptionsView.RowTotalsLocation = PivotRowTotalsLocation.Near
             pivot.OptionsView.ShowColumnGrandTotals = False
             pivot.OptionsView.ColumnTotalsLocation = PivotTotalsLocation.Far
             pivot.OptionsDataField.Area = PivotDataArea.ColumnArea
             pivot.OptionsDataField.AreaIndex = 1
         End Sub
-        Private Shared Function GetAllowedArea(ByVal area As PivotArea) As PivotGridAllowedAreas
+
+        Private Function GetAllowedArea(ByVal area As PivotArea) As PivotGridAllowedAreas
             Select Case area
                 Case PivotArea.ColumnArea
                     Return PivotGridAllowedAreas.ColumnArea
@@ -53,8 +63,9 @@ Namespace ASPxPivotGrid_HidingColumnsAndRows
                     Return PivotGridAllowedAreas.All
             End Select
         End Function
-        Public Shared Function GetDataTable() As DataTable
-            Dim table As New DataTable()
+
+        Public Function GetDataTable() As DataTable
+            Dim table As DataTable = New DataTable()
             table.Columns.Add(Employee, GetType(String))
             table.Columns.Add(Widget, GetType(String))
             table.Columns.Add(Month, GetType(Integer))
@@ -76,5 +87,5 @@ Namespace ASPxPivotGrid_HidingColumnsAndRows
             table.Rows.Add(EmployeeB, WidgetC, 7, 40.0, 38.3, 7, 1)
             Return table
         End Function
-    End Class
+    End Module
 End Namespace
