@@ -6,9 +6,6 @@
 
 
 # Pivot Grid for Web Forms - How to Hide Specific Rows and Columns
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e2767/)**
-<!-- run online end -->
 
 The following example demonstrates how handle the [CustomFieldValueCells](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomFieldValueCells) event to hide specific rows and columns. In this example, the event handler iterates through all row headers and removes rows that correspond to the "Employee B" field value, and that are not Total Rows.
 
